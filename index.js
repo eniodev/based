@@ -25,3 +25,4 @@ try {
   console.log(`💥 Something went wrong!! Please Try Again...${err.message}`);    
 }
 
+module.exports = projectFileTree
