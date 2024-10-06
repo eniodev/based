@@ -1,21 +1,21 @@
-<div style="text-align:center">
+<div align="center">
   <img src="./public/finally_based.jpg" />
 </div>
 
 # Based Stack
 
-`Based` is a the ultimate stack for web frontend development!
+`Based` is the ultimate stack for web frontend development!
 
-There is made of 3 main technologies:
+This stack is made of 3 main technologies:
 
-[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): also know as the super hot HyperText Markup Language
-[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS): the most used technology for styling web apps
-[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): for many, the best programming language in the world
++ [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): also know as the super hot HyperText Markup Language
++ [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS): the most used technology for styling web apps
++ [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): for many, the best programming language in the world
 
 I know, right? It's based!
 
-<div style="text-align:center">
-  <img src="./public/based.png" />
+<div align="center">
+  <img src="./public/based.png" width="50" height="50"/>
 </div>
 
 ## Why based?
@@ -24,7 +24,7 @@ You don't need React, Angular or Vue to build a simple website. Keep it simple, 
 
 ## Prerequisites
 
-To started using the based stack from this source, you just have to make sure you have [node](https://nodejs.org/en/download/package-manager)(anny version) on your machine.
++ [node](https://nodejs.org/en/download/package-manager)(any version)
 
 ## Getting started
 
