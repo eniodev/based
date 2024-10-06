@@ -2,7 +2,7 @@
   <img src="./public/finally_based.jpg" />
 </div>
 
-# Based Stack
+<p style="text-align:center">The Based Stack</p>
 
 `Based` is the ultimate stack for web frontend development!
 
@@ -12,10 +12,10 @@ This stack is made of 3 main technologies:
 + [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS): the most used technology for styling web apps
 + [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): for many, the best programming language in the world
 
-I know, right? It's based!
+I know, right? Completely *based*!
 
 <div align="center">
-  <img src="./public/based.png" width="50" height="50"/>
+  <img src="./public/based.png" width="100" height="auto"/>
 </div>
 
 ## Why based?
@@ -24,7 +24,7 @@ You don't need React, Angular or Vue to build a simple website. Keep it simple, 
 
 ## Prerequisites
 
-+ [node](https://nodejs.org/en/download/package-manager)(any version)
++ [node](https://nodejs.org/en/download/package-manager) (any version)
 
 ## Getting started
 
@@ -37,14 +37,14 @@ $ npm based <project-name>
 Ater that, the file tree of your project should look like this:
 
 ```
-+-- <project-name>
-|  +-- assets
-|  |   +-- img
-|  +-- css
-|  |   +-- styles.css
-|  +-- js
-|  |   +-- scripts.js
-+-- index.html
+<project-name>
+├── assets
+│   └── img
+├── css
+│   └── styles.css
+├── index.html
+└── js
+    └── scripts.js
 ```
 
 > [!NOTE]  
