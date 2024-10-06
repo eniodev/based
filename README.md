@@ -10,8 +10,8 @@
 
 This stack is made of 3 main technologies:
 
-+ [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): also know as the super hot HyperText Markup Language
-+ [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS): the most used technology for styling web apps
++ [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): also known as the super hot HyperText Markup Language
++ [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS): the most used technology for styling web pages
 + [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): for many, the best programming language in the world
 
 I know, right? Completely *based*!
