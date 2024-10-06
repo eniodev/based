@@ -22,6 +22,6 @@ const projectFileTree = {
 try {
   init(projectFileTree);
 } catch(err) {
-  console.log(err);    
+  console.log(`💥 Something went wrong!! Please Try Again...${err.message}`);    
 }
 
