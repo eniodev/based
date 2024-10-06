@@ -2,7 +2,9 @@
   <img src="./public/finally_based.jpg" />
 </div>
 
-<p style="text-align:center">The Based Stack</p>
+<div align="center">
+  <h1>The Based Stack</h1>
+</div>
 
 `Based` is the ultimate stack for web frontend development!
 
@@ -34,7 +36,7 @@ Run the command below to start a new based web app:
 $ npm based <project-name>
 ```
 
-Ater that, the file tree of your project should look like this:
+Ater that, the file tree of your project could look like this:
 
 ```
 <project-name>
@@ -46,6 +48,8 @@ Ater that, the file tree of your project should look like this:
 └── js
     └── scripts.js
 ```
+
+Now you can start building on the web, no need for garbage frameworks :)
 
 > [!NOTE]  
 > This is a work in progress
