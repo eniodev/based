@@ -10,9 +10,9 @@
 
 This stack is made of 3 main technologies:
 
-+ [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): also known as the super hot HyperText Markup Language
-+ [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS): the most used technology for styling web pages
-+ [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): for many, the best programming language in the world
++ [`HTML`](https://developer.mozilla.org/en-US/docs/Web/HTML): also known as the super hot HyperText Markup Language
++ [`CSS`](https://developer.mozilla.org/en-US/docs/Web/CSS): the most used technology for styling web pages
++ [`JavaScript`](https://developer.mozilla.org/en-US/docs/Web/JavaScript): for many, the best programming language in the world
 
 I know, right? Completely *based*!
 
@@ -26,7 +26,7 @@ You don't need React, Angular or Vue to build a simple website. Keep it simple, 
 
 ## Prerequisites
 
-+ [node](https://nodejs.org/en/download/package-manager) (any version)
++ [`node`](https://nodejs.org/en/download/package-manager) (any version)
 
 ## Getting started
 
@@ -55,12 +55,12 @@ NO! We highly recommend the use of [`live-server`](https://www.npmjs.com/package
 Just install it:
 
 ```console
-npm install -g live-server
+$ npm install -g live-server
 ```
 And run it inside your project root folder:
 
-````console
-live-server
+```console
+$ live-server
 ```
 
 Now you can start building on the web, no need for garbage frameworks :)
