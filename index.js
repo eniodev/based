@@ -1,14 +1,20 @@
 #!/usr/bin/env node
 
+const readline = require('readline');
 const init = require("./installer.js")
 const projectFolder = process.argv.slice(2)[0];
 
-const stylesFolder = "css";
-const scriptsFolder = "js";
-const htmlEntryFile = "index.html";
-const cssEntryFile = "styles.css";
-const jsEntryFile = "scripts.js";
-const imagesFolder = "img";
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+let stylesFolder = "CSS";
+let scriptsFolder = "JS";
+let htmlEntryFile = "index.html";
+let cssEntryFile = "styles.css";
+let jsEntryFile = "scripts.js";
+let imagesFolder = "img";
 
 const projectFileTree = {
   [projectFolder]: {
@@ -19,10 +25,6 @@ const projectFileTree = {
   }
 }
 
-try {
-  init(projectFileTree);
-} catch(err) {
-  console.log(`💥 Something went wrong!! Please Try Again...${err.message}`);    
-}
+init(projectFileTree);
 
 module.exports = projectFileTree
