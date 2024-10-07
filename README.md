@@ -17,7 +17,7 @@ This stack is made of 3 main technologies:
 I know, right? Completely *based*!
 
 <div align="center">
-  <img src="./public/based.png" width="100" height="auto"/>
+  <img src="./public/based_squidward.png" width="100" height="auto"/>
 </div>
 
 ## Why based?
