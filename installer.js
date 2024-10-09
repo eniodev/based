@@ -1,7 +1,7 @@
 const  fs = require("fs");
 const { html, css, javascript } = require("./models.js");
 
-const init = (projectFileTree) => {
+const init = async (projectFileTree) => {
   const projectFolder = Object.keys(projectFileTree)[0];
   
   for (const subFolder in projectFileTree[projectFolder]) {
@@ -33,20 +33,53 @@ const init = (projectFileTree) => {
         break;
       default:
         const assetsFolderPath = `${projectFolder}/${subFolder}/${entryFile}`;
-        fs.mkdirSync(assetsFolderPath, { recursive: true });
+        await fs.mkdirSync(assetsFolderPath, { recursive: true });
+        
         const assetsFolder = fs.createWriteStream(`${assetsFolderPath}/based.png`);
         const based_squidward = fs.createReadStream(`./public/based_squidward.png`);
-        based_squidward.pipe(assetsFolder);
-        based_squidward.on("end", () => {
+        
+        await based_squidward.pipe(assetsFolder);
+        await based_squidward.on("end", () => {
           process.exit(0);
-        })
+        });
     }   
   }
 }
 
-const setupFolder = (path, seedFile, loaderFn, loaderParam) => {
-  fs.mkdirSync(path);
-  fs.writeFileSync(`${path}/${seedFile}`, loaderFn(loaderParam));
+const setupFolder = async (path, seedFile, loaderFn, loaderParam) => {
+  await fs.mkdirSync(path);
+  await fs.writeFileSync(`${path}/${seedFile}`, loaderFn(loaderParam));
 }
 
-module.exports = init;
+const setupOptions = [
+  {
+    question: "Html file name: (root folder)",
+    default: "index.html"
+  },
+  {
+    question: "Css folder name: (css)",
+    default: "css",
+    child: {
+      question: "Css file name: (styles.css)",
+      default: "styles.css"
+    }
+  },
+  {
+    question: "Javascript folder name: (js)",
+    default: "js",
+    child: {
+      question: "Javascript file name: (scripts.js)",
+      default: "scripts.js"
+    }
+  },
+  {
+    question: "Pick a name for your image folder: (img)",
+    default: "img",
+    parent: "assets"
+  }
+]
+
+module.exports = { 
+  init,
+  setupOptions
+}
