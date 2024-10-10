@@ -14,7 +14,7 @@ const init = async (projectFileTree) => {
           projectFolder,
           entryFile,
           html,
-          projectFileTree[projectFolder]
+          projectFileTree
         );
         break;
       case "css":
@@ -35,8 +35,8 @@ const init = async (projectFileTree) => {
         const assetsFolderPath = `${projectFolder}/${subFolder}/${entryFile}`;
         await fs.mkdirSync(assetsFolderPath, { recursive: true });
         
-        const assetsFolder = fs.createWriteStream(`${assetsFolderPath}/based.png`);
-        const based_squidward = fs.createReadStream(`./public/based_squidward.png`);
+        const assetsFolder = await fs.createWriteStream(`${assetsFolderPath}/based.png`);
+        const based_squidward = await fs.createReadStream(`./public/based_squidward.png`);
         
         await based_squidward.pipe(assetsFolder);
         await based_squidward.on("end", () => {

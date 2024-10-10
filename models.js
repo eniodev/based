@@ -1,47 +1,30 @@
 module.exports = {
-  html: (projectFolder) => {
-    const projectFolderKeys = Object.keys(projectFolder);
+  html: (projectFileTree) => {
+    const projectFolder = Object.keys(projectFileTree)[0];
+    const projectFolderKeys = Object.keys(projectFileTree[projectFolder]);
+    const htmlEntryFile = projectFolderKeys[0];
     const cssEntryFolder = projectFolderKeys[1];
     const jsEntryFolder = projectFolderKeys[2];
     
     return `
     <!doctype html>
-    <html lang="en">
-      
+    <html lang="en-US">
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
-        <link rel="stylesheet" href="${cssEntryFolder}/${projectFolder[cssEntryFolder]}">
-        <meta name="description" content="">
-      
-        <meta property="og:title" content="">
-        <meta property="og:type" content="">
-        <meta property="og:url" content="">
-        <meta property="og:image" content="">
-        <meta property="og:image:alt" content="">
-      
-        <link rel="icon" href="/favicon.ico" sizes="any">
-        <link rel="icon" href="/icon.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="icon.png">
-      
-        <link rel="manifest" href="site.webmanifest">
-        <meta name="theme-color" content="#fafafa">
+        <title>${projectFolder}</title>
+        <link rel="stylesheet" href="${cssEntryFolder}/${projectFileTree[projectFolder][cssEntryFolder]}">
+        <link rel="icon" type="image/x-icon" href="./assets/${projectFileTree[projectFolder].assets}/based.png">
       </head>
-      
       <body>
-      
-        <!-- Add your site or application content here -->
+        <!-- Add your content here -->
         <div align="center">
-            <img id="squidward" src="./assets/${projectFolder.assets}/based.png" alt="Based Squidward" width="50"/>
+            <img id="squidward" src="./assets/${projectFileTree[projectFolder].assets}/based.png" alt="Based Squidward" width="50"/>
             <h2>Blazingly Fast!</h2>
-            <p>Start editing <code>${projectFolder.htmlEntryFile}</code> too se changes</p>
-        </div>
-        
-        <script src="${jsEntryFolder}/${projectFolder[jsEntryFolder]}"></script>
-      
+            <p>Start editing <code>${projectFileTree[projectFolder][htmlEntryFile]}</code> too se changes</p>
+        </div> 
+        <script src="${jsEntryFolder}/${projectFileTree[projectFolder][jsEntryFolder]}"></script>
       </body>
-    
     </html>`;
   },
   css: () =>{
