@@ -2,6 +2,7 @@ module.exports = {
   html: (projectFileTree) => {
     const projectFolder = Object.keys(projectFileTree)[0];
     const projectFolderKeys = Object.keys(projectFileTree[projectFolder]);
+    
     const htmlEntryFile = projectFolderKeys[0];
     const cssEntryFolder = projectFolderKeys[1];
     const jsEntryFolder = projectFolderKeys[2];

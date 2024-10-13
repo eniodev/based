@@ -6,9 +6,8 @@ const init = async (projectFileTree) => {
   
   for (const subFolder in projectFileTree[projectFolder]) {
     const entryFile = projectFileTree[projectFolder][subFolder];
-    const fileExt = entryFile.split(".").pop();
     
-    switch (fileExt) {
+    switch (extension(entryFile)) {
       case "html":
         setupFolder(
           projectFolder,
@@ -46,14 +45,36 @@ const init = async (projectFileTree) => {
   }
 }
 
+const extension = (file) => file.split(".").pop();
+
 const setupFolder = async (path, seedFile, loaderFn, loaderParam) => {
-  await fs.mkdirSync(path);
+  await fs.mkdirSync(path, { recursive: true });
   await fs.writeFileSync(`${path}/${seedFile}`, loaderFn(loaderParam));
+}
+
+const getValidName = (input, _default) => {
+  // TODO: Write a better regex
+  const FILE_NAME = /^[a-zA-Z].*/;
+  
+  if (!input) {
+    return _default;
+  }
+  if (!FILE_NAME.exec(input)) {
+    console.log(`:: Invalid name! Setting (${_default}) as default name`);
+    return _default;
+  }
+  if(extension(input)!==extension(_default)){
+    return extension(_default) !== _default 
+      ? `${input}.${extension(_default)}`
+      : input
+    ;
+  }
+  return input;
 }
 
 const setupOptions = [
   {
-    question: "Html file name: (root folder)",
+    question: "Html file name: (index.html)",
     default: "index.html"
   },
   {
@@ -81,5 +102,6 @@ const setupOptions = [
 
 module.exports = { 
   init,
+  getValidName,
   setupOptions
 }
