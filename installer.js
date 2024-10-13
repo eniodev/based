@@ -33,15 +33,15 @@ const init = async (projectFileTree) => {
       default:
         const assetsFolderPath = `${projectFolder}/${subFolder}/${entryFile}`;
         await fs.mkdirSync(assetsFolderPath, { recursive: true });
-        
-        const assetsFolder = await fs.createWriteStream(`${assetsFolderPath}/based.png`);
-        const based_squidward = await fs.createReadStream(`./public/based_squidward.png`);
-        
-        await based_squidward.pipe(assetsFolder);
-        await based_squidward.on("end", () => {
-          process.exit(0);
-        });
-    }   
+        await loadAssets(
+          assetsFolderPath,
+          {
+            'based.png': './public/based_squidward.png',
+            'favicon.ico': './public/favicon.ico'
+          }
+        );
+        await process.exit(0);
+    }
   }
 }
 
@@ -50,6 +50,12 @@ const extension = (file) => file.split(".").pop();
 const setupFolder = async (path, seedFile, loaderFn, loaderParam) => {
   await fs.mkdirSync(path, { recursive: true });
   await fs.writeFileSync(`${path}/${seedFile}`, loaderFn(loaderParam));
+}
+
+const loadAssets = async (path, assets) => {
+  for (const file in assets) {
+    await fs.copyFileSync(assets[file], `${path}/${file}`);
+  }
 }
 
 const getValidName = (input, _default) => {

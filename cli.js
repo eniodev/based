@@ -33,7 +33,7 @@ else {
         question(option);
       });
     } catch (err) {
-      console.log(`:: Something went wrong!! Please Try Again...${err.message}`);
+      console.log(`:: Something went wrong!! Please try again...${err.message}`);
       process.exit(1);
     }
   }
