@@ -59,8 +59,7 @@ const loadAssets = async (path, assets) => {
 }
 
 const getValidName = (input, _default) => {
-  // TODO: Write a better regex
-  const FILE_NAME = /^[a-zA-Z].*/;
+  const FILE_NAME = /^(?!.*(?:\+|\^|\\|\/|\`|\|))[a-zA-z0-9 -]+$/
   
   if (!input) {
     return _default;
@@ -100,8 +99,8 @@ const setupOptions = [
     }
   },
   {
-    question: "Pick a name for your image folder: (img)",
-    default: "img",
+    question: "Pick a name for your image folder: (images)",
+    default: "images",
     parent: "assets"
   }
 ]

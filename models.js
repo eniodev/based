@@ -19,19 +19,21 @@ module.exports = {
   </head>
   <body>
     <!-- Add your content here -->
-    <div align="center">
-      <img id="squidward" src="./assets/${projectFileTree[projectFolder].assets}/based.png" alt="Based Squidward" width="50"/>
-      <h2>Blazingly Fast!</h2>
-      <p>Start editing <code>${projectFileTree[projectFolder][htmlEntryFile]}</code> to see changes</p>
-    </div> 
-    <div align="center" style="margin-top: 10px;">
-      <p>
-        <a href="https://github.com/eniodev/based" target="_blank" style="color: #6666ff;">Learn the Based Stack</a>
-      </p>
-      <button type="button" data-counter>
-        counter is <span></span>
-      </button>       
-    </div> 
+    <div style="padding-block: 5rem;">
+      <div align="center">
+        <img id="squidward" src="./assets/${projectFileTree[projectFolder].assets}/based.png" alt="Based Squidward" width="50"/>
+        <h2>Blazingly Fast!</h2>
+        <p>Start editing <code>${projectFileTree[projectFolder][htmlEntryFile]}</code> to see changes</p>
+      </div> 
+      <div align="center" style="margin-top: 10px;">
+        <p>
+          <a href="https://github.com/eniodev/based" target="_blank" style="color: #6666ff;">Learn the Based Stack</a>
+        </p>
+        <button type="button" data-counter>
+          counter is <span></span>
+        </button>       
+      </div> 
+    </div>
     <script src="${jsEntryFolder}/${projectFileTree[projectFolder][jsEntryFolder]}"></script>
   </body>
 </html>`;
