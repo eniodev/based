@@ -2,7 +2,7 @@
 
 const  fs = require("fs");
 const readline = require("readline");
-const { init, getValidName, setupOptions } = require("./installer.js");
+const { init, banner, getValidName, setupOptions } = require("./installer.js");
 
 const projectFolder = process.argv.slice(2)[0];
 
@@ -23,6 +23,8 @@ else {
   const projectFileTree = {
     [projectFolder]: {}
   }
+  
+  console.log(banner);
   
   const based = async () => {
     try {

@@ -75,6 +75,17 @@ const getValidName = (input, _default) => {
   return input;
 }
 
+const banner = `
+Welcome to the Based command line interface!!
+This utility will walk you through creating a brand new project with the Based Stack.
+:: The ultimate tech stack for web frontend development ::
+
+Tip: use \`npm i live-server -g\` to install live-server and stop worrying about refreshing the page :)
+Check: https://github.com/eniodev/based for setup details. 
+
+Press ^C at any time to exit the cli.
+`;
+
 const setupOptions = [
   {
     question: "Html file name: (index.html)",
@@ -105,6 +116,7 @@ const setupOptions = [
 
 module.exports = { 
   init,
+  banner,
   getValidName,
   setupOptions
 }

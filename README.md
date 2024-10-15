@@ -49,7 +49,7 @@ Ater that, the file tree of your project could look like this:
 ```
 <project-name>
 ├── assets
-│   └── img
+│   └── images
 ├── css
 │   └── styles.css
 ├── index.html
