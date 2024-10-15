@@ -26,7 +26,15 @@ You don't need React, Angular or Vue to build a simple website. Keep it simple, 
 
 ## Prerequisites
 
-+ [`node`](https://nodejs.org/en/download/package-manager) (any version)
++ [`node`](https://nodejs.org/en/download/package-manager) (`version`: 16 or higher)
+
+## Installation
+
+Run the command below to install `based` cli on your machine:
+
+```console
+$ npm install based --global
+```
 
 ## Getting started
 
@@ -55,7 +63,7 @@ NO! We highly recommend the use of [`live-server`](https://www.npmjs.com/package
 Just install it:
 
 ```console
-$ npm install -g live-server
+$ npm install live-server --global
 ```
 And run it inside your project root folder:
 

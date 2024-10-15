@@ -2,10 +2,10 @@
   "name": "based",
   "version": "1.0.0",
   "description": "\"The ultimate stack for web frontend development\"",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "cli.js",
+  "bin": {
+    "based": "./cli.js"
   },
-  "author": "",
+  "author": "Énio Carlos",
   "license": "MIT"
 }

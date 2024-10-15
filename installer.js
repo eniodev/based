@@ -4,9 +4,7 @@ const { html, css, javascript } = require("./models.js");
 const init = async (projectFileTree) => {
   const projectFolder = Object.keys(projectFileTree)[0];
   
-  for (const subFolder in projectFileTree[projectFolder]) {
-    const entryFile = projectFileTree[projectFolder][subFolder];
-    
+  for (const [subFolder, entryFile] of Object.entries(projectFileTree[projectFolder])) {
     switch (extension(entryFile)) {
       case "html":
         setupFolder(
@@ -34,10 +32,10 @@ const init = async (projectFileTree) => {
         const assetsFolderPath = `${projectFolder}/${subFolder}/${entryFile}`;
         await fs.mkdirSync(assetsFolderPath, { recursive: true });
         await loadAssets(
-          assetsFolderPath,
+          process.cwd() + "/" + assetsFolderPath,
           {
-            'based.png': './public/based_squidward.png',
-            'favicon.ico': './public/favicon.ico'
+            'based.png': __dirname + '/public/based_squidward.png',
+            'favicon.ico': __dirname + '/public/favicon.ico'
           }
         );
         await process.exit(0);
