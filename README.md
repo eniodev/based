@@ -41,7 +41,7 @@ $ npm install based --global
 Run the command below to start a new based web app:
 
 ```console
-$ npm based <project-name>
+$ based <project-name>
 ```
 
 Ater that, the file tree of your project could look like this:
