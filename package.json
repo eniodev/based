@@ -8,7 +8,7 @@
     "based": "./cli.js"
   },
   "engines": {
-    "node": ">=v14.21.3"
+    "node": ">=14.21.3"
   },
   "private": false,
   "author": "Énio Carlos",

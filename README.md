@@ -26,7 +26,7 @@ You don't need React, Angular or Vue to build a simple website. Keep it simple, 
 
 ## Prerequisites
 
-+ [`node`](https://nodejs.org/en/download/package-manager) (`version: =>v14.21.3`)
++ [`node`](https://nodejs.org/en/download/package-manager) (`version => 14.21.3`)
 
 ## Installation
 
