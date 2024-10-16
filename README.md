@@ -30,7 +30,7 @@ You don't need React, Angular or Vue to build a simple website. Keep it simple, 
 
 ## Installation
 
-Run the command below to install `based` cli on your machine:
+Run the command below to install `based` command line on your machine:
 
 ```console
 $ npm install based --global
@@ -38,7 +38,7 @@ $ npm install based --global
 
 ## Getting started
 
-Run the command below to start a new based web app:
+Run the command below to start a new project:
 
 ```console
 $ based <project-name>
@@ -50,11 +50,11 @@ Ater that, the file tree of your project could look like this:
 <project-name>
 ├── assets
 │   └── images
-├── css
-│   └── styles.css
+├── styles
+│   └── index.css
 ├── index.html
-└── js
-    └── scripts.js
+└── scripts
+    └── index.js
 ```
 ## Will you have to refresh the browser to see any changes?
 
