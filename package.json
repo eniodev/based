@@ -1,11 +1,11 @@
 {
   "name": "create-based-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The hottest frontend stack for web development",
   "keywords": ["html", "css", "javascript", "cli", "techstack", "frontend"],
   "main": "cli.js",
   "bin": {
-    "based": "./cli.js"
+    "create-based-app": "./cli.js"
   },
   "engines": {
     "node": ">=14.21.3"
