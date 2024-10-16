@@ -6,7 +6,7 @@
   <h1>The Based Stack</h1>
 </div>
 
-`Based` is the ultimate stack for web frontend development!
+`Based` is the hottest frontend stack for web development!
 
 This stack is made of 3 main technologies:
 
@@ -26,7 +26,7 @@ You don't need React, Angular or Vue to build a simple website. Keep it simple, 
 
 ## Prerequisites
 
-+ [`node`](https://nodejs.org/en/download/package-manager) (`version`: 16 or higher)
++ [`node`](https://nodejs.org/en/download/package-manager) (`version: =>v14.21.3`)
 
 ## Installation
 
@@ -73,5 +73,10 @@ $ live-server
 
 Now you can start building on the web, no need for garbage frameworks :)
 
-> [!NOTE]  
-> This is a work in progress
+## License
+
+MIT
+
+---
+
+Made with :heart: by [Énio Carlos](https://github.com/eniodev)

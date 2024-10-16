@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const  fs = require("fs");
+const fs = require("fs");
 const readline = require("readline");
 const { init, banner, getValidName, setupOptions } = require("./installer.js");
 

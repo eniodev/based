@@ -1,11 +1,18 @@
 {
   "name": "based",
   "version": "1.0.0",
-  "description": "\"The ultimate stack for web frontend development\"",
+  "description": "The hottest frontend stack for web development",
+  "keywords": ["html", "css", "javascript", "cli", "techstack", "frontend"],
   "main": "cli.js",
   "bin": {
     "based": "./cli.js"
   },
+  "engines": {
+    "node": ">=v14.21.3"
+  },
+  "private": false,
   "author": "Énio Carlos",
+  "repository": "https://github.com/eniodev/based",
+  "bugs": "https://github.com/eniodev/based/issues",
   "license": "MIT"
 }

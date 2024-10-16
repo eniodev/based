@@ -78,7 +78,7 @@ const getValidName = (input, _default) => {
 const banner = `
 Welcome to the Based command line interface!!
 This utility will walk you through creating a brand new project with the Based Stack.
-:: The ultimate tech stack for web frontend development ::
+:: The hottest frontend stack for web development ::
 
 Tip: use \`npm i live-server -g\` to install live-server and stop worrying about refreshing the page :)
 Check: https://github.com/eniodev/based for setup details. 
@@ -92,23 +92,23 @@ const setupOptions = [
     default: "index.html"
   },
   {
-    question: "Css folder name: (css)",
-    default: "css",
+    question: "Css folder name: (styles)",
+    default: "styles",
     child: {
-      question: "Css file name: (styles.css)",
-      default: "styles.css"
+      question: "Css file name: (index.css)",
+      default: "index.css"
     }
   },
   {
-    question: "Javascript folder name: (js)",
-    default: "js",
+    question: "Javascript folder name: (scripts)",
+    default: "scripts",
     child: {
-      question: "Javascript file name: (scripts.js)",
-      default: "scripts.js"
+      question: "Javascript file name: (index.js)",
+      default: "index.js"
     }
   },
   {
-    question: "Pick a name for your image folder: (images)",
+    question: "Pick a name for your images folder: (images)",
     default: "images",
     parent: "assets"
   }
